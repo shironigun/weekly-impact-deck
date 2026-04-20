@@ -22,9 +22,9 @@ Perfect for product managers, dev leads, and anyone who needs to communicate tec
 
 Built with PowerShell automation, markdown documentation, and responsive HTML presentations.
 
-Open source and ready to use! 
+Open source and ready to use!
 
-GitHub: https://github.com/yourusername/weekly-impact-deck
+GitHub: https://github.com/shironigun/weekly-impact-deck
 
 #SoftwareDevelopment #ProductManagement #Agile #DevOps #TechLeadership #OpenSource
 ```
@@ -54,7 +54,7 @@ Features:
 
 Open sourced under MIT license. Ready to use today!
 
-Check it out: https://github.com/yourusername/weekly-impact-deck
+Check it out: https://github.com/shironigun/weekly-impact-deck
 
 What tools do you use to communicate dev work to stakeholders?
 
@@ -90,7 +90,7 @@ Stack:
 Perfect for teams that want simple, portable reporting without external dependencies.
 
 ⭐ Star it if you find it useful!
-🔗 https://github.com/yourusername/weekly-impact-deck
+🔗 https://github.com/shironigun/weekly-impact-deck
 
 #OpenSource #PowerShell #DevTools #Productivity #Software #Git
 ```
@@ -111,7 +111,7 @@ Turn your dev team's technical work into stakeholder-ready weekly presentations.
 
 Perfect for product managers and dev leads.
 
-https://github.com/yourusername/weekly-impact-deck
+https://github.com/shironigun/weekly-impact-deck
 
 #ProductManagement #SoftwareDevelopment #Agile
 ```
@@ -121,10 +121,12 @@ https://github.com/yourusername/weekly-impact-deck
 ## Tips for Maximum Engagement
 
 ### Best Posting Times:
+
 - **Tuesday-Thursday**: 9-11 AM or 5-6 PM (your timezone)
 - **Avoid**: Weekends and Monday mornings
 
 ### Engagement Strategies:
+
 1. **Ask a question** at the end (increases comments)
 2. **Tag relevant people** (colleagues who might find it useful)
 3. **Use 3-5 hashtags** (more can reduce reach)
@@ -134,6 +136,7 @@ https://github.com/yourusername/weekly-impact-deck
 ### Hashtag Recommendations:
 
 **Business Focused:**
+
 - #ProductManagement
 - #Agile
 - #Leadership
@@ -141,6 +144,7 @@ https://github.com/yourusername/weekly-impact-deck
 - #StakeholderManagement
 
 **Developer Focused:**
+
 - #SoftwareDevelopment
 - #DevOps
 - #OpenSource
@@ -148,6 +152,7 @@ https://github.com/yourusername/weekly-impact-deck
 - #Automation
 
 **General:**
+
 - #ProjectManagement
 - #Productivity
 - #Communication
@@ -166,10 +171,13 @@ https://github.com/yourusername/weekly-impact-deck
 ## Images to Include (Recommended)
 
 ### Option A: Screenshot of Presentation
+
 Take a screenshot of the HTML presentation (slide 1 or slides overview)
 
 ### Option B: Folder Structure
+
 Show the clean project organization:
+
 ```
 weekly-impact-deck/
 ├── templates/
@@ -179,10 +187,12 @@ weekly-impact-deck/
 ```
 
 ### Option C: Before/After
+
 - **Before**: Complex technical jargon
 - **After**: Clear business impact language
 
 ### Option D: Stats Dashboard
+
 Screenshot of the statistics/KPI slide
 
 ---
@@ -192,6 +202,7 @@ Screenshot of the statistics/KPI slide
 **Title:** "How I Built a Stakeholder Communication System for Dev Teams"
 
 **Outline:**
+
 1. The Problem: Technical vs. Business Language Gap
 2. Why Existing Tools Didn't Work
 3. The Solution: Template-Based Approach
@@ -200,8 +211,7 @@ Screenshot of the statistics/KPI slide
 6. Lessons Learned
 7. Call to Action (Try it, star it, contribute)
 
-**Length:** 800-1200 words
-**Include:** Code snippets, screenshots, GitHub link
+**Length:** 800-1200 words **Include:** Code snippets, screenshots, GitHub link
 **Hashtags:** Same as above
 
 ---
@@ -209,28 +219,43 @@ Screenshot of the statistics/KPI slide
 ## Sample Comment Responses
 
 **If someone asks "How does it compare to Jira/Confluence?"**
-> "Great question! This is deliberately lightweight - no database, no server, just files. Perfect for teams that want version-controlled documentation without the overhead. Jira is great for task tracking, but this focuses purely on stakeholder communication. They can complement each other!"
+
+> "Great question! This is deliberately lightweight - no database, no server,
+> just files. Perfect for teams that want version-controlled documentation
+> without the overhead. Jira is great for task tracking, but this focuses purely
+> on stakeholder communication. They can complement each other!"
 
 **If someone asks "Can it integrate with X?"**
-> "Currently standalone, but it's open source! The markdown format makes it easy to parse and integrate. Would love to see community contributions for [X] integration!"
+
+> "Currently standalone, but it's open source! The markdown format makes it easy
+> to parse and integrate. Would love to see community contributions for [X]
+> integration!"
 
 **If someone asks "Do you have a demo?"**
-> "Yes! The repo includes a complete example week with sample data. Clone it and run `.\new-week-setup.ps1` to see it in action. The example/ folder shows what the output looks like."
+
+> "Yes! The repo includes a complete example week with sample data. Clone it and
+> run `.\new-week-setup.ps1` to see it in action. The example/ folder shows what
+> the output looks like."
 
 ---
 
 ## Portfolio Integration
 
 ### GitHub README Customization:
+
 Add a "Featured" badge or banner image
 
 ### Resume Bullet Points:
+
 - "Developed open-source reporting system with 100+ GitHub stars"
-- "Automated stakeholder communication process using PowerShell and markdown templates"
+- "Automated stakeholder communication process using PowerShell and markdown
+  templates"
 - "Created business-impact-focused documentation framework"
 
 ### Portfolio Website:
+
 Create a dedicated project page with:
+
 - Problem statement
 - Technical approach
 - Live demo (GitHub Pages)
@@ -240,6 +265,7 @@ Create a dedicated project page with:
 
 **Remember:** Authenticity > Perfection
 
-Share why you built it, what problem it solved for you, and how you hope it helps others!
+Share why you built it, what problem it solved for you, and how you hope it
+helps others!
 
 🚀 Good luck with your launch!

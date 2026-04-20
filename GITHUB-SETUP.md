@@ -29,12 +29,14 @@ Your project is ready to push to GitHub! Follow these steps:
 
 ### 2. Connect Your Local Repository to GitHub
 
-GitHub will show you commands. Use these **(replace `yourusername` with your
-GitHub username)**:
+✅ **Already done!** Your repository is live at:
+**https://github.com/shironigun/weekly-impact-deck**
+
+If you need to do this manually in the future:
 
 ```powershell
 # Add the remote repository
-git remote add origin https://github.com/yourusername/weekly-impact-deck.git
+git remote add origin https://github.com/shironigun/weekly-impact-deck.git
 
 # Rename branch to main (if needed)
 git branch -M main
@@ -126,7 +128,7 @@ git push
 ```powershell
 # Remove and re-add
 git remote remove origin
-git remote add origin https://github.com/yourusername/weekly-updates.git
+git remote add origin https://github.com/shironigun/weekly-impact-deck.git
 ```
 
 ### Error: "Authentication failed"
@@ -183,6 +185,6 @@ Your professional project is now on GitHub and ready to share!
 
 ---
 
-**Repository URL Format:** `https://github.com/yourusername/weekly-impact-deck`
+**Repository URL Format:** `https://github.com/shironigun/weekly-impact-deck`
 
 **Make it public and it's portfolio-ready!** 🚀

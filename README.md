@@ -47,7 +47,7 @@ stakeholders actually understand. Perfect for:
 ### 1. Clone the Repository
 
 ```powershell
-git clone https://github.com/yourusername/weekly-impact-deck.git
+git clone https://github.com/shironigun/weekly-impact-deck.git
 cd weekly-impact-deck
 ```
 
@@ -290,9 +290,9 @@ inspired this system by asking "What did you accomplish this week?"
 ## 📞 Support
 
 - **Issues**:
-  [GitHub Issues](https://github.com/yourusername/weekly-updates/issues)
+  [GitHub Issues](https://github.com/shironigun/weekly-impact-deck/issues)
 - **Discussions**:
-  [GitHub Discussions](https://github.com/yourusername/weekly-updates/discussions)
+  [GitHub Discussions](https://github.com/shironigun/weekly-impact-deck/discussions)
 
 ---
 
