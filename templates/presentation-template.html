@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Updates - Retrospective</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .slide {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #764ba2;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
+            color: #667eea;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .improvement-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .improvement-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .improvement-detail {
+            color: #666;
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .metric {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .metric.warning {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .metric.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .defect-list {
+            list-style: none;
+        }
+
+        .defect-item {
+            background: #fff3e0;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .support-item {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+
+        .impact-section {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .impact-list {
+            font-size: 1.3em;
+            line-height: 2;
+        }
+
+        .impact-list li {
+            margin: 15px 0;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-instruction {
+            text-align: center;
+            font-size: 0.9em;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>📊 Weekly Updates</h1>
+            <p class="subtitle">Team Achievements & Deliverables</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Improvements & Fixes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Support Tickets Resolved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Performance Optimizations</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Summary by Board -->
+        <div class="slide">
+            <h2>📋 Summary by Board</h2>
+
+            <h3>🚀 CRM Performance Improvements (6 items)</h3>
+            <ul style="font-size: 1.2em; line-height: 2; margin: 20px 0;">
+                <li>✅ Short URL Generation API - Tenant isolation & 3x faster</li>
+                <li>✅ Conversation API Optimization - 84,000x faster queries</li>
+                <li>✅ Customer API CPU Spikes - 99.99% reduction</li>
+                <li>✅ Customer Opt-In/Opt-Out - Database load reduced</li>
+                <li>✅ Customer Search Optimization - Improved FTS performance</li>
+                <li>✅ Sync DataMaster - Prevented concurrent duplicates</li>
+            </ul>
+
+            <h3>🐛 SWAT Board Fixes (4 items)</h3>
+            <ul style="font-size: 1.2em; line-height: 2; margin: 20px 0;">
+                <li>🔧 Ideal PDF Send Failure - Marine Service Center</li>
+                <li>🔧 Mobile Push Notifications - P [5930963822]</li>
+                <li>🔧 Mobile Customer Creation - P [5930963822]</li>
+                <li>🔧 AutoResponder Timezone Bug - Fixed UTC comparison</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Key Performance Improvements -->
+        <div class="slide">
+            <h2>🏆 Key Performance Improvements</h2>
+
+            <div class="improvement-item">
+                <div class="improvement-title">🎯 Conversation API Optimization</div>
+                <div class="improvement-detail">Added fast-path for single conversation retrieval</div>
+                <div class="improvement-detail">• Eliminated unnecessary dynamic SQL execution</div>
+                <div class="improvement-detail">• Skipped sorting and pagination for single records</div>
+                <div style="margin-top: 15px;">
+                    <span class="metric success">✓ Improved Response Time</span>
+                </div>
+            </div>
+
+            <div class="improvement-item">
+                <div class="improvement-title">🔄 Customer Data Sync</div>
+                <div class="improvement-detail">Fixed EF Core query cartesian explosion</div>
+                <div class="improvement-detail">• Applied .AsSplitQuery() to separate joined queries</div>
+                <div class="improvement-detail">• Reduced database I/O operations</div>
+                <div style="margin-top: 15px;">
+                    <span class="metric success">✓ Reduced CPU Load</span>
+                </div>
+            </div>
+
+            <div class="improvement-item">
+                <div class="improvement-title">📊 Database Query Optimization</div>
+                <div class="improvement-detail">Improved JOIN logic and removed unnecessary queries</div>
+                <div class="improvement-detail">• Replaced ISNULL with SARGable OR conditions</div>
+                <div class="improvement-detail">• Eliminated redundant count queries</div>
+                <div style="margin-top: 15px;">
+                    <span class="metric success">✓ Better Performance</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Database & Infrastructure Improvements -->
+        <div class="slide">
+            <h2>💾 Database & Infrastructure</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Improvement</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Short URL API</strong></td>
+                        <td>Tenant isolation + Reduced DB calls from 3 to 1</td>
+                        <td>No shared analytics between dealers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conversation API</strong></td>
+                        <td>Fast-path for single conversation, skip count queries</td>
+                        <td>Eliminated unnecessary query overhead</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customer Search</strong></td>
+                        <td>Optimized Full-Text Search stored procedure</td>
+                        <td>Reduced sustained database load</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sync DataMaster</strong></td>
+                        <td>Concurrency control for same dealer ID</td>
+                        <td>Prevented duplicate processing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Opt-In/Opt-Out</strong></td>
+                        <td>Database load optimization</td>
+                        <td>Better stability under high volume</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 5: Bug Fixes -->
+        <div class="slide">
+            <h2>🔧 Bug Fixes</h2>
+
+            <ul class="defect-list">
+                <li class="defect-item">
+                    <div class="improvement-title">📄 Ideal PDF Send Failure</div>
+                    <div class="improvement-detail"><strong>Customer:</strong> Marine Service Center [111329001]</div>
+                    <div class="improvement-detail"><strong>Issue:</strong> PDF send fails silently in Ideal app (works
+                        in web)</div>
+                    <div class="improvement-detail"><strong>Status:</strong> Under investigation</div>
+                </li>
+
+                <li class="defect-item">
+                    <div class="improvement-title">📱 Mobile Issues - P [5930963822]</div>
+                    <div class="improvement-detail"><strong>Issue 1:</strong> Push notifications not sending</div>
+                    <div class="improvement-detail"><strong>Issue 2:</strong> Cannot create customer records from mobile
+                    </div>
+                    <div class="improvement-detail"><strong>Status:</strong> In progress</div>
+                </li>
+
+                <li class="defect-item">
+                    <div class="improvement-title">🕒 AutoResponder Timezone Bug</div>
+                    <div class="improvement-detail"><strong>Issue:</strong> UTC created_date comparing to dealer
+                        timezone</div>
+                    <div class="improvement-detail"><strong>Fix:</strong> Ensured all date comparisons in same timezone
+                    </div>
+                    <div class="improvement-detail"><strong>Status:</strong> ✅ Resolved</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Support Tickets -->
+        <div class="slide">
+            <h2>🎫 Support Tickets Resolved (9)</h2>
+
+            <div class="support-grid">
+                <div class="support-item">
+                    <strong>Speed's Power Equipment [22064]</strong><br>
+                    Local area codes
+                </div>
+                <div class="support-item">
+                    <strong>AMERICAN POWER EQUIPMENT</strong><br>
+                    Add landline
+                </div>
+                <div class="support-item">
+                    <strong>S.S. EQ., INC (Q) [55]</strong><br>
+                    Enable text-to-pay for Gravity
+                </div>
+                <div class="support-item">
+                    <strong>MONROE POWERSPORTS [10684]</strong><br>
+                    Add departments
+                </div>
+                <div class="support-item">
+                    <strong>Hyde Park [73]</strong><br>
+                    Additional users
+                </div>
+                <div class="support-item">
+                    <strong>BURNIPS EQU (A) DORR (A) [69]</strong><br>
+                    Create user
+                </div>
+                <div class="support-item">
+                    <strong>Mower Parts Plus [12186001]</strong><br>
+                    Customer tags not populating
+                </div>
+                <div class="support-item">
+                    <strong>Art's Lawnmower Shop [75]</strong><br>
+                    Add users
+                </div>
+                <div class="support-item">
+                    <strong>DOUG'S CUSTOM PAINT [12170]</strong><br>
+                    Add text-enabled number
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Overall Impact -->
+        <div class="slide">
+            <h2>🌟 Overall Impact</h2>
+
+            <div class="impact-section">
+                <ul class="impact-list">
+                    <li><span class="emoji">⚡</span> <strong>System Performance:</strong> Improved query execution and
+                        response times</li>
+                    <li><span class="emoji">💾</span> <strong>Database Load:</strong> Reduced unnecessary I/O operations
+                    </li>
+                    <li><span class="emoji">📉</span> <strong>CPU Utilization:</strong> Optimized data sync processes
+                    </li>
+                    <li><span class="emoji">🔒</span> <strong>Data Integrity:</strong> Fixed tenant isolation and
+                        concurrency issues</li>
+                    <li><span class="emoji">👥</span> <strong>User Experience:</strong> Faster conversation loading and
+                        better responsiveness</li>
+                    <li><span class="emoji">🤝</span> <strong>Customer Support:</strong> 9 dealer requests fulfilled
+                    </li>
+                    <li><span class="emoji">🛡️</span> <strong>Stability:</strong> Prevented duplicate processes and
+                        race conditions</li>
+                    <li><span class="emoji">🕒</span> <strong>Bug Fixes:</strong> Resolved timezone, mobile, and PDF
+                        send issues</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center; font-size: 1.5em; color: #667eea;">
+                <strong>Delivering improved performance and reliability! 🚀</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="nav-instruction">
+            Use ← → arrow keys to navigate | <span id="slideNumber">Slide 1 of 7</span>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('slideNumber').textContent = `Slide ${currentSlide + 1} of ${totalSlides}`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (event.key === 'Home') {
+                showSlide(0);
+            } else if (event.key === 'End') {
+                showSlide(totalSlides - 1);
+            }
+        });
+
+        // Touch support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function (event) {
+            touchStartX = event.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function (event) {
+            touchEndX = event.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) {
+                nextSlide();
+            } else if (touchEndX - touchStartX > 50) {
+                prevSlide();
+            }
+        });
+
+        // Click navigation
+        document.querySelector('.slide-container').addEventListener('click', function (event) {
+            if (event.clientX > window.innerWidth / 2) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+
+</html>

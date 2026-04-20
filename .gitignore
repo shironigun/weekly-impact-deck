@@ -1,0 +1,42 @@
+# Weekly Updates Repository - Git Ignore
+
+# Ignore folders with real company/customer data
+*-PRIVATE/
+*-private/
+*.private/
+
+# Ignore actual weekly data folders (uncomment when you start using)
+# 2026/
+# 2025/
+# 2027/
+
+# Keep example folders
+!example/
+
+# Ignore sensitive data
+*.secret
+*.key
+*.env
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore temp files
+*.tmp
+*.bak
+*.log
+
+# Ignore actual KPI data (contains real metrics)
+kpi-tracker.csv
+
+# Keep the KPI tracker template
+!kpi-tracker-template.csv
