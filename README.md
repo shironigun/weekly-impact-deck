@@ -1,13 +1,16 @@
 # 📊 Weekly Updates - Stakeholder Presentation System
 
-A comprehensive system for tracking, documenting, and presenting weekly software development updates to non-technical stakeholders.
+A comprehensive system for tracking, documenting, and presenting weekly software
+development updates to non-technical stakeholders.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)](https://docs.microsoft.com/en-us/powershell/)
 
 ## 🎯 Purpose
 
-Transform technical work into clear, business-focused presentations that stakeholders actually understand. Perfect for:
+Transform technical work into clear, business-focused presentations that
+stakeholders actually understand. Perfect for:
+
 - **Development Teams** sharing weekly progress
 - **Product Managers** communicating with leadership
 - **Support Teams** demonstrating customer impact
@@ -16,18 +19,21 @@ Transform technical work into clear, business-focused presentations that stakeho
 ## ✨ Features
 
 ### 📝 Organized Documentation
+
 - **3 Work Categories**: Improvements, Defects, Support
 - **Developer Attribution**: Track who did what
 - **Business Impact Focus**: Plain English explanations
 - **Flexible Metadata**: Optional fields for Priority, Story Points, Severity
 
 ###🎨 Professional Presentations
+
 - **12-Slide Template**: Ready for stakeholder meetings
 - **Visual Charts**: Developer contributions, work distribution
 - **KPI Tracking**: Velocity, quality metrics, customer impact
 - **Business Outcomes**: Connect technical work to business value
 
 ### ⚙️ Automation
+
 - **PowerShell Scripts**: Automate folder creation and stats generation
 - **Quick Setup**: New week ready in seconds
 - **Auto Statistics**: Generate metrics from your markdown files
@@ -36,22 +42,26 @@ Transform technical work into clear, business-focused presentations that stakeho
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
+
 ```powershell
 git clone https://github.com/yourusername/weekly-updates.git
 cd weekly-updates
 ```
 
 ### 2. Start a New Week
+
 ```powershell
 .\new-week-setup.ps1
 ```
 
 This creates:
+
 - Week folder structure (tickets/, defects/, support/)
 - Presentation template
 - README for the week
 
 ### 3. Add Your First Item
+
 ```powershell
 # For an improvement/feature
 .\add-ticket.ps1 -Type ticket -Number 1 -Title "performance-optimization"
@@ -64,17 +74,21 @@ This creates:
 ```
 
 ### 4. Fill in the Details
+
 Each ticket file has sections for:
+
 - **Metadata**: Developer, Priority (optional), Status
 - **Business Impact**: Why it matters (for stakeholders)
 - **Technical Details**: What was done
 
 ### 5. Generate Weekly Stats
+
 ```powershell
 .\generate-stats.ps1
 ```
 
 Get instant metrics on:
+
 - Total items by type
 - Developer contributions
 - Story points (if tracked)
@@ -82,6 +96,7 @@ Get instant metrics on:
 - Customer impact
 
 ### 6. Create Your Presentation
+
 - Open the week's `presentation.html`
 - Fill in the placeholders with your stats
 - Follow the guide in`PRESENTATION-GUIDE.md`
@@ -116,8 +131,10 @@ weekly-updates/
 ## 📖 Documentation
 
 - **[QUICK-START.md](QUICK-START.md)** - Daily workflow and common commands
-- **[PRESENTATION-GUIDE.md](PRESENTATION-GUIDE.md)** - Step-by-step presentation creation
-- **[IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md)** - Complete feature overview
+- **[PRESENTATION-GUIDE.md](PRESENTATION-GUIDE.md)** - Step-by-step presentation
+  creation
+- **[IMPLEMENTATION-SUMMARY.md](IMPLEMENTATION-SUMMARY.md)** - Complete feature
+  overview
 - **[example/](example/)** - Sample week with real-world examples
 
 ## 🎯 Key Concepts
@@ -125,14 +142,17 @@ weekly-updates/
 ### Business Impact Over Technical Details
 
 ❌ **Bad** (Too Technical):
+
 > "Reduced query execution from 5930ms to 0.07ms using SARGable OR logic"
 
 ✅ **Good** (Business-Focused):
+
 > "System loads conversations instantly, improving user productivity"
 
 ### Developer Attribution
 
 Every item tracks who did the work:
+
 - Recognizes team contributions
 - Shows workload distribution
 - Enables capacity planning
@@ -140,11 +160,13 @@ Every item tracks who did the work:
 ### Flexible Metadata
 
 **Required:**
+
 - Developer (who did it)
 - Business Impact (why it matters)
 - Status (done/in-progress)
 
 **Optional:**
+
 - Priority
 - Story Points
 - Severity
@@ -154,6 +176,7 @@ Even without optional fields, you get useful presentations!
 ### Stakeholder-Friendly Presentations
 
 12 professional slides:
+
 1. Weekly Overview
 2. Work Distribution Dashboard
 3. Improvements Released
@@ -170,16 +193,24 @@ Even without optional fields, you get useful presentations!
 ## 💡 Example Use Cases
 
 ### Software Development Team
-Track features, bugs, and optimizations weekly. Show leadership the business impact of technical work.
+
+Track features, bugs, and optimizations weekly. Show leadership the business
+impact of technical work.
 
 ### Product Team
-Demonstrate progress on roadmap items with clear customer benefits and adoption metrics.
+
+Demonstrate progress on roadmap items with clear customer benefits and adoption
+metrics.
 
 ### Support Team
-Highlight customer requests handled, common issues resolved, and impact on customer satisfaction.
+
+Highlight customer requests handled, common issues resolved, and impact on
+customer satisfaction.
 
 ### DevOps Team
-Communicate infrastructure improvements, incident resolutions, and system stability achievements.
+
+Communicate infrastructure improvements, incident resolutions, and system
+stability achievements.
 
 ## 🔧 Requirements
 
@@ -192,6 +223,7 @@ That's it! No databases, no servers, no complex dependencies.
 ## 📊 KPI Tracking
 
 Track these metrics week-over-week:
+
 - **Velocity**: Items completed
 - **Cycle Time**: Days from start to done
 - **Quality**: Defects found vs. resolved
@@ -203,18 +235,23 @@ Use the included `kpi-tracker-template.csv` to track trends.
 ## 🎨 Customization
 
 ### Modify Templates
+
 Edit files in `templates/` to match your team's needs:
+
 - Add custom fields
 - Change section names
 - Adjust the presentation design
 
 ### Adapt the Presentation
+
 The HTML presentation is fully customizable:
+
 - Change colors and branding
 - Add/remove slides
 - Modify charts and layouts
 
 ### Create Your Own Scripts
+
 PowerShell scripts are simple and well-commented. Extend them for your workflow.
 
 ## 🤝 Contributing
@@ -227,6 +264,7 @@ Contributions welcome! If you have ideas to improve this system:
 4. Submit a pull request
 
 Ideas we'd love to see:
+
 - Additional PowerShell automation
 - Presentation themes
 - Integration with project management tools (Jira, Azure DevOps)
@@ -235,21 +273,26 @@ Ideas we'd love to see:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 ## 🙏 Acknowledgments
 
-Built for teams who need to bridge the gap between technical work and business communication.
+Built for teams who need to bridge the gap between technical work and business
+communication.
 
-Special thanks to all the developers, product managers, and stakeholders who inspired this system by asking "What did you accomplish this week?"
+Special thanks to all the developers, product managers, and stakeholders who
+inspired this system by asking "What did you accomplish this week?"
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/weekly-updates/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/weekly-updates/discussions)
+- **Issues**:
+  [GitHub Issues](https://github.com/yourusername/weekly-updates/issues)
+- **Discussions**:
+  [GitHub Discussions](https://github.com/yourusername/weekly-updates/discussions)
 
 ---
 
 **Made with ❤️ for development teams everywhere**
 
-*Transform technical achievements into stakeholder victories* 🚀
+_Transform technical achievements into stakeholder victories_ 🚀
