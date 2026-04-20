@@ -1,7 +1,10 @@
-# 📊 Weekly Updates - Stakeholder Presentation System
+# 📊 Weekly Impact Deck
 
-A comprehensive system for tracking, documenting, and presenting weekly software
-development updates to non-technical stakeholders.
+> **Transform technical work into stakeholder-ready presentations**
+
+A professional system for tracking, documenting, and presenting weekly software
+development updates to non-technical stakeholders. Turn your team's work into
+clear, business-focused presentations that demonstrate real impact.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)](https://docs.microsoft.com/en-us/powershell/)
@@ -44,8 +47,8 @@ stakeholders actually understand. Perfect for:
 ### 1. Clone the Repository
 
 ```powershell
-git clone https://github.com/yourusername/weekly-updates.git
-cd weekly-updates
+git clone https://github.com/yourusername/weekly-impact-deck.git
+cd weekly-impact-deck
 ```
 
 ### 2. Start a New Week

@@ -18,9 +18,9 @@ Your project is ready to push to GitHub! Follow these steps:
 1. Go to [GitHub](https://github.com) and log in
 2. Click the **+** icon in the top right → **New repository**
 3. Fill in the details:
-   - **Repository name**: `weekly-updates` (or your preferred name)
-   - **Description**: "Stakeholder presentation system for weekly software
-     development updates"
+   - **Repository name**: `weekly-impact-deck`
+   - **Description**: "Transform technical work into stakeholder-ready
+     presentations - Weekly software development impact tracking and reporting"
    - **Visibility**: Choose **Public** (recommended for portfolio) or
      **Private**
    - **DO NOT** initialize with README, .gitignore, or license (we already have
@@ -34,7 +34,7 @@ GitHub username)**:
 
 ```powershell
 # Add the remote repository
-git remote add origin https://github.com/yourusername/weekly-updates.git
+git remote add origin https://github.com/yourusername/weekly-impact-deck.git
 
 # Rename branch to main (if needed)
 git branch -M main
@@ -183,6 +183,6 @@ Your professional project is now on GitHub and ready to share!
 
 ---
 
-**Repository URL Format:** `https://github.com/yourusername/weekly-updates`
+**Repository URL Format:** `https://github.com/yourusername/weekly-impact-deck`
 
 **Make it public and it's portfolio-ready!** 🚀
